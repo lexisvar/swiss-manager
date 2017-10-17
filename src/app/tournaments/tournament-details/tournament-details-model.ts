@@ -1,8 +1,10 @@
+import { PlayerModel } from '../../players/shared/player-model';
+
 export class TournamentDetailsModel {
   id: number;
   name: string;
   rules: string[];
-  registeredPlayers: Player[];
+  registeredPlayers: PlayerModel[];
   startDate: Date;
   endDate: Date;
   status: TournamentStatus;

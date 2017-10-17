@@ -1,3 +1,36 @@
-<p>
-  tournament-details works!
-</p>
+<div class="inner" *ngIf="tournament">
+    <mat-toolbar color="primary">
+        {{tournament.name}} 
+        <span class="spacer"></span>
+        
+    </mat-toolbar>
+
+    <div class="section">
+        <mat-toolbar>
+            <mat-icon color="accent">toc</mat-icon>    
+            Tournament rules
+                                
+        </mat-toolbar>
+
+      <div class="rules" *ngFor="let rule of tournament.rules; let i = index;">
+          <p>{{i+1}}.) {{rule}} </p>
+      </div>
+    </div>
+
+    <div class="section">
+        <mat-toolbar>
+            <mat-icon color="accent">trending_up</mat-icon>
+            Standings            
+        </mat-toolbar>
+
+        <app-tournament-standings-table>
+        </app-tournament-standings-table>  
+    </div>
+
+    <div class="section">
+        <mat-toolbar>
+            <mat-icon color="accent">done</mat-icon>
+            Round pairings and results
+        </mat-toolbar>
+    </div>
+</div>

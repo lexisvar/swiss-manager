@@ -1,0 +1,41 @@
+<ngx-datatable  class="material fullscreen"
+[rows]="standings" 
+[columns]="columns"
+[headerHeight]="50"
+[rowHeight]="'auto'"
+[columnMode]="'force'"
+(sort)="onSort($event)">
+
+<ngx-datatable-column name="Name" prop="lastName">
+    <ng-template let-column="column" let-sort="sortFn"  ngx-datatable-header-template>          
+      <span (click)="sort()">Name</span>
+    </ng-template>          
+    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+      {{row.lastName}}, {{row.firstName}}
+    </ng-template>      
+</ngx-datatable-column>
+<ngx-datatable-column name="Record" prop="wins">
+    <ng-template let-column="column"   let-sort="sortFn" ngx-datatable-header-template>          
+      <span (click)="sort()">Record</span>
+    </ng-template>          
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.wins}} (W) - {{row.losses}} (L) 
+    </ng-template>      
+</ngx-datatable-column>
+<ngx-datatable-column name="Total Opponent Points" prop="totalOpponentScore">
+    <ng-template let-column="column" let-sort="sortFn"  ngx-datatable-header-template>          
+        <span (click)="sort()">Total Opponent Points</span>
+    </ng-template>          
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.totalOpponentScore}}
+    </ng-template>      
+</ngx-datatable-column>
+<ngx-datatable-column name="Tiebreak Points">
+    <ng-template  let-sort="sortFn"  let-column="column" ngx-datatable-header-template>          
+      <span (click)="sort()" >Tiebreak Points</span>
+    </ng-template>          
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.tiebreakPoints}}
+    </ng-template>      
+</ngx-datatable-column>
+</ngx-datatable>

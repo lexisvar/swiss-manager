@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule, MatMenuModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatIconModule, MatChipsModule } from '@angular/material';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import {MatTooltipModule} from '@angular/material';
+import {MatTooltipModule, MatListModule} from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +14,7 @@ import {MatTooltipModule} from '@angular/material';
     MatIconModule,
     MatChipsModule,
     MatTooltipModule,
+    MatListModule
   ],
   exports: [
     CommonModule,
@@ -25,7 +26,8 @@ import {MatTooltipModule} from '@angular/material';
     MatIconModule,
     MatChipsModule,
     NavBarComponent,
-    MatTooltipModule
+    MatTooltipModule,
+    MatListModule
   ],
 
   declarations: [NavBarComponent]

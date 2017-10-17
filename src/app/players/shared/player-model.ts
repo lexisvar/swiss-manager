@@ -1,7 +1,9 @@
 export class PlayerModel {
   
 
-  constructor (public id: number, public firstName: string,
+  constructor(
+    public id: number,
+    public firstName: string,
     public lastName: string,
     public rating: number,
     public wins: number,
