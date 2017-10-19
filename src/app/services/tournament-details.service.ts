@@ -24,6 +24,448 @@ export class TournamentDetailsService {
         `Tiebreaks: in case of a tie in 1st-3rd rankings, Tiebreak points will decide the final standings.`
       ]
       tournament.name = "KDDP October 2017 Swiss Tournament";
+      tournament.rounds = [
+        {
+          roundNumber: 1,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },
+        {
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        },{
+          roundNumber: 2,
+          pairings: [
+            {
+              boardNumber: 1,
+              white: {
+                id: 1,
+                firstName: "Jen",
+                points: 0,
+              },
+              black: {
+                id: 6,
+                firstName: "Joard",
+                points: 1
+              }
+            },
+            {
+              boardNumber: 2,
+              white: {
+                id: 2,
+                firstName: "Nayk",
+                points: 1
+              },
+              black: {
+                id: 7,
+                firstName: "Edward",
+                points: 0
+              }
+            },
+            {
+              boardNumber: 5,
+              white: {
+                id: 1,
+                lastName: "Arioste",
+                firstName: "Jasser",
+                points: 1,
+                isDefaultWin: true
+              },
+              black: {
+                id: 2,
+                firstName: "Gerald",
+                lastName: "Galanida",
+                points: 0,
+                isDefaultWin: false
+              },
+              status: "completed"
+            }
+          ]
+        }
+      ]
       resolve(tournament);
     })
   }

@@ -7,6 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TournamentStandingsTableComponent implements OnInit {
   standings: any[];
+  defaultSortProps = [
+    { prop: 'wins', dir: 'desc' }
+  ];
   @Input() tournamentId: number;
   constructor() { }
 
@@ -45,8 +48,8 @@ export class TournamentStandingsTableComponent implements OnInit {
         lastName: "Saquillon",
         wins: 3,
         losses: 2,
-        totalOpponentScore: 14,
-        tiebreakPoints: 42
+        totalOpponentScore: 13,
+        tiebreakPoints: 39
       },
       {
         id: 5,
@@ -54,18 +57,25 @@ export class TournamentStandingsTableComponent implements OnInit {
         lastName: "Sillador",
         wins: 3,
         losses: 2,
-        totalOpponentScore: 13,
-        tiebreakPoints: 39
+        totalOpponentScore: 14,
+        tiebreakPoints: 42
       }
     ]
+
   }
 
-  onSort(event:any) {
+  onSort(event: any) {
     console.log(event);
     let column = event.column;
     this.standings.sort((a, b) => {
-      return a[column.prop] - b[column.prop];  
-      
+      let result = 0;
+      if (column.prop === "wins") {
+        result = (a.wins - b.wins) || (a.tiebreakPoints - b.tiebreakPoints);
+      } else {
+        result = a[column.prop] - b[column.prop];
+      }
+
+      return event.newValue === "asc" ? result : -result;
     })
   }
 }

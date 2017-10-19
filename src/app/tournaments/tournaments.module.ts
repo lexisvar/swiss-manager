@@ -6,6 +6,7 @@ import { CoreModule } from '../core/core.module';
 import { TournamentDetailsComponent } from './tournament-details/tournament-details.component';
 import { TournamentStandingsTableComponent } from './tournament-standings-table/tournament-standings-table.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { PairTableComponent } from './pair-table/pair-table.component';
 
 @NgModule({
   imports: [    
@@ -13,6 +14,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     CoreModule,
     NgxDatatableModule
   ],
-  declarations: [TournamentsComponent, TournamentsListComponent, TournamentDetailsComponent, TournamentStandingsTableComponent]
+  declarations: [TournamentsComponent, TournamentsListComponent, TournamentDetailsComponent, TournamentStandingsTableComponent, PairTableComponent],
+  
 })
 export class TournamentsModule { }

@@ -5,14 +5,14 @@
         
     </mat-toolbar>
 
-    <div class="section">
+    <div class="section mat-typography">
         <mat-toolbar>
             <mat-icon color="accent">toc</mat-icon>    
             Tournament rules
                                 
         </mat-toolbar>
 
-      <div class="rules" *ngFor="let rule of tournament.rules; let i = index;">
+      <div class="rules caption" *ngFor="let rule of tournament.rules; let i = index;">
           <p>{{i+1}}.) {{rule}} </p>
       </div>
     </div>
@@ -22,15 +22,28 @@
             <mat-icon color="accent">trending_up</mat-icon>
             Standings            
         </mat-toolbar>
-
-        <app-tournament-standings-table>
-        </app-tournament-standings-table>  
+        <div class="section">
+            <app-tournament-standings-table>
+            </app-tournament-standings-table>  
+        </div>
+        
     </div>
 
     <div class="section">
         <mat-toolbar>
             <mat-icon color="accent">done</mat-icon>
             Round pairings and results
+            <span class="spacer"></span>
+            <button mat-icon-button color="accent">
+                <mat-icon matTooltip="Gemerate pairings for next round" matTooltipPosition="left">add_circle</mat-icon>
+            </button>    
         </mat-toolbar>
+        <div class="mat-typography round-pairing">
+            <div class="round" *ngFor="let round of tournament.rounds">
+                <h3 class="round-number">Round {{round.roundNumber}}</h3>
+                <app-pair-table [pairings]="round.pairings">                
+                </app-pair-table>
+            </div>
+        </div>
     </div>
 </div>

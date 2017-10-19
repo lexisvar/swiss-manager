@@ -9,6 +9,7 @@ export class TournamentDetailsModel {
   endDate: Date;
   status: TournamentStatus;
   description: string;
+  rounds: any[];
 }
 
 export enum TournamentStatus {
