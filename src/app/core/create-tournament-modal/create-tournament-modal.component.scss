@@ -1,0 +1,10 @@
+.full-width {
+  width: 100%;
+}
+
+.rules {
+  display:flex;
+  .rule-input{
+    flex-grow:1;  
+  }
+}

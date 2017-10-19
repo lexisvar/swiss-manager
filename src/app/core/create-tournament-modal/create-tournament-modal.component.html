@@ -1,0 +1,52 @@
+<h1 mat-dialog-title> Organize a tournament</h1>
+<mat-dialog-content>
+  <form class="example-form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Name" value="Chess Tournament 2017">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+          <textarea matInput  placeholder="Description" id="" cols="100" rows="10"></textarea>
+      </mat-form-field>
+
+      <p>Rules</p>
+      <div class="full-width rules" *ngFor="let rule of rules">
+          <mat-form-field class="rule-input">
+              <input matInput name="existingRule" value="{{rule}}" />              
+          </mat-form-field>
+          <button mat-icon-button color="primary" (click)="deleteRule(rule)" type="button">
+            <mat-icon>delete_circle</mat-icon>
+          </button>  
+      </div>
+      <div class="full-width rules">
+          <mat-form-field class="rule-input">
+              <input matInput placeholder="Add a rule..." name="newRule" [(ngModel)]="newRule" />              
+          </mat-form-field>
+
+          <button mat-icon-button color="primary" (click)="addRule()" type="button">
+            <mat-icon>add_circle</mat-icon>
+          </button>  
+      </div>
+      
+      <p>Players</p>
+      <div class="full-width rules">
+          <mat-form-field class="rule-input">
+              <mat-select placeholder="Choose from player database">
+                  <mat-option *ngFor="let player of data.players" [value]="player.id">{{ player.firstName}} {{player.lastName}} </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+          <button mat-icon-button color="primary" (click)="addPlayer()" type="button">
+            <mat-icon>add_circle</mat-icon>
+          </button>  
+      </div>
+    </form> 
+  
+  
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <span class="spacer"></span>
+  <button color="primary" mat-button [mat-dialog-close]="true">Create</button>
+</mat-dialog-actions>
