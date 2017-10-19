@@ -4,7 +4,14 @@
   [headerHeight]="50"
   [rowHeight]="'auto'"
   [columnMode]="'force'">
-  
+  <ngx-datatable-column [width]="30" [sortable]="false" [canAutoResize]="false" [draggable]="false" [resizeable]="false">
+      <ng-template ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+        <mat-checkbox class="checkbox" [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"></mat-checkbox>
+      </ng-template>
+      <ng-template ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+          <mat-checkbox class="checkbox"  [checked]="isSelected" (change)="onCheckboxChangeFn($event)"></mat-checkbox>        
+      </ng-template>
+  </ngx-datatable-column>
   <ngx-datatable-column name="Name">
       <ng-template let-column="column" ngx-datatable-header-template>          
         Name
