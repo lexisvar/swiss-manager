@@ -1,0 +1,37 @@
+<ngx-datatable  class="material fullscreen"
+[rows]="pairings"
+[headerHeight]="50"
+[rowHeight]="'auto'"
+[columnMode]="'standard'"
+>
+
+  <ngx-datatable-column name="White" prop="white" [width]="200" [resizeable]="false" >
+      <ng-template let-column="column"  ngx-datatable-header-template >          
+        <span class="handle">White</span>
+      </ng-template>          
+      <ng-template let-row="row" let-value="value" ngx-datatable-cell-template >
+        <div  [class.win]="row.white.points === 1" [class.loss]="row.white.points === 0">
+            {{row.white.firstName}} 
+            <span>({{row.white.points}}) 
+              <span *ngIf="row.black.isDefaultWin">d</span>
+            </span>
+        </div>
+        
+      </ng-template>      
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Black" prop="black" [width]="200" [resizeable]="false">
+      <ng-template let-column="column"   ngx-datatable-header-template >          
+        <span class="handle">Black</span>
+      </ng-template>          
+      <ng-template let-row="row" ngx-datatable-cell-template>
+          <div [class.win]="row.black.points === 1" [class.loss]="row.black.points === 0">
+              {{row.black.firstName}} 
+              <span >({{row.black.points}}<span *ngIf="row.white.isDefaultWin">d</span>)
+                  
+              </span>  
+          </div>
+          
+      </ng-template>      
+  </ngx-datatable-column>
+</ngx-datatable>
